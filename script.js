@@ -1,6 +1,5 @@
 
 let balance = 0;
-
 const coin = document.getElementById('coin');
 const balanceDisplay = document.getElementById('balance');
 const clicksDisplay = document.getElementById('clicks');
@@ -16,21 +15,20 @@ coin.addEventListener('click', () => {
 	var tapSound = new Audio('tap.mp3');
 	tapSound.play();
     if (balance == 100) {
-		endGame();
+	endGame();
     }
 });
 
-
 function endGame() {
-		var winSound = new Audio('win.mp3');
+	var winSound = new Audio('win.mp3');
      	winSound.play();
-		played = true;
+	played = true;
 		
-		    setTimeout(() => {
-				alert('Поздравляю! Недо-игра пройдена!');
-      let answer = confirm("Нажмите ОК если игра вам понравилась!");
+   setTimeout(() => {
+   alert('Congratulations! You won the game!!');
+   let answer = confirm("Press OK button if you liked this game!");
             if (answer) {
-                alert("Ну тыж лапуля!.");
+                alert("thanks!.");
             } else {
                 alert(":(");
             }
@@ -46,17 +44,11 @@ function animateCoin() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Получаем элемент монетки
     var coin = document.getElementById('coin');
-
-    // Добавляем обработчик события клика
     coin.addEventListener('click', function () {
-        // Добавляем класс анимации
         coin.classList.add('animate');
-
-        // Задержка перед удалением класса анимации, чтобы можно было снова кликнуть
         setTimeout(function () {
             coin.classList.remove('animate');
-        }, 50); // 0.5 секунды - время анимации
+        }, 50);
     });
 });
