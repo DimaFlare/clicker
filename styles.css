@@ -1,0 +1,77 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(180deg, #6b81f2, #536adb); /* Градиентный фон */
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    width: 100%; /* Ширина контейнера */
+    height: 100%; /* Высота контейнера */
+}
+
+#balanceText {
+    font-size: 32px; /* Увеличиваем размер шрифта */
+    background: linear-gradient(135deg, #4cf56b, #4cf5a9); /* Градиент для текста */
+	font-family: 'Roboto', sans-serif; /* Применяем шрифт Roboto */
+	font-weight: bold; /* Делаем текст жирным */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute; /* Позиционируем над картинкой */
+    top: 10%; /* Отступ от верхнего края */
+    left: 50%; /* Выравниваем по центру */
+    transform: translateX(-50%); /* Корректируем положение */
+}
+
+#balance {
+    font-size: 34px; /* Увеличиваем размер шрифта */
+    color: white; /* Белый цвет шрифта */
+    position: absolute; /* Позиционируем над картинкой */
+    top: 27%; /* Отступ от верхнего края */
+    left: 50%; /* Выравниваем по центру */
+    transform: translateX(-50%); /* Корректируем положение */
+}
+
+.coin {
+    width: 200px;
+    cursor: pointer;
+    position: absolute; /* Позиционируем над картинкой */
+    top: 50%; /* Центрируем по вертикали */
+    left: 50%; /* Центрируем по горизонтали */
+    transform: translate(-50%, -50%); /* Центрируем с учетом масштаба */
+}
+
+#t {
+    font-size: 30px; /* Увеличиваем размер шрифта */
+    background: linear-gradient(135deg, #f5de4c, #f5ba4c); /* Градиент для текста */
+	font-family: 'Roboto', sans-serif; /* Применяем шрифт Roboto */
+	font-weight: bold; /* Делаем текст жирным */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute; /* Позиционируем над картинкой */
+    top: 65%; /* Отступ от верхнего края */
+    left: 50%; /* Выравниваем по центру */
+    transform: translateX(-50%); /* Корректируем положение */
+}
+
+/* Анимация монетки */
+.animate {
+    animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+    from {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    to {
+        transform: translate(-50%, -50%) scale(2.75);
+    }
+}
+
+.progress-bar {
+    background-color: #12345f; /* Цвет фона прогресс-бара */
+}

@@ -1,2 +1,1 @@
-# clicker
-dimaVklyareSuperSite
+# vladimercoins.github.io
